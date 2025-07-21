@@ -1,3 +1,12 @@
+## GitからCloneしてLocalHost:3000で見る
+``` bash
+git clone https://github.com/your-name/your-nextjs-project.git
+cd your-nextjs-project
+npm install
+npm run dev
+```
+http://localhost:3000
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
