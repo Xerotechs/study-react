@@ -1,9 +1,11 @@
+import React from 'react';
 /**
  * ファイル名
  * @property title - ファイル名
  */
-type Props = {
+interface  Props {
     title:string
+    children:React.ReactNode
 }
 
 /**
@@ -11,7 +13,7 @@ type Props = {
  * @param title - ファイル名
  * @returns 画面中央の手順表示
  */
-export default function Headline({title}:Props){
+export function Headline({title,children}:Props){
     return(
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
             <li className="mb-2 tracking-[-.01em]">
@@ -21,9 +23,7 @@ export default function Headline({title}:Props){
             </code>
             .
             </li>
-            <li className="tracking-[-.01em]">
-            pages/{title}.tsx
-            </li>
+            {children}
         </ol>
     );
 }
