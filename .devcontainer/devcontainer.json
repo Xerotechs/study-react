@@ -1,0 +1,28 @@
+{
+  "name": "Next.js DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "CHOKIDAR_USEPOLLING": "true",
+    "WATCHPACK_POLLING": "true",
+    "WDS_SOCKET_HOST": "127.0.0.1"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": { "label": "Next.js App", "onAutoForward": "openPreview" }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "remoteUser": "node"
+}

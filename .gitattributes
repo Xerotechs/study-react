@@ -1,0 +1,9 @@
+# すべてのテキストファイルをLF（UNIX）改行に統一
+* text=auto eol=lf
+
+# バイナリファイルは自動変換しない
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.mp4 binary
