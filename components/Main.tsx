@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Headline } from "./Headline";
-import { Links } from "./Links";
+import styles from "../src/app/page.module.css";
 
 interface  Props{
     page:string
@@ -8,23 +8,48 @@ interface  Props{
 
 export function Main({page}:Props){
     return(
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-            <Image
-                className="dark:invert"
-                src="/next.svg"
-                alt="Next.js logo"
-                width={180}
-                height={38}
-                priority
-            />
-            <Headline
+        <main className={styles.main}>
+        <Image
+          className={styles.logo}
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <Headline
                 title = "index"
             >
                 <li className="tracking-[-.01em]">
                 pages/{page}.tsx
                 </li>
             </Headline>
-            <Links />
-        </main>
+
+        <div className={styles.ctas}>
+          <a
+            className={styles.primary}
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondary}
+          >
+            Read our docs
+          </a>
+        </div>
+      </main>
     );
 }
