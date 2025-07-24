@@ -17,6 +17,7 @@
     }
   },
   "postCreateCommand": "npm install",
+  "postStartCommand": "npm run dev",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": { "label": "Next.js App", "onAutoForward": "openPreview" }
