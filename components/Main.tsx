@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Headline } from "./Headline";
+import { Links } from "./Links";
 import styles from "../src/app/page.module.css";
 
 interface  Props{
