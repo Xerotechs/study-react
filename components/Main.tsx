@@ -1,5 +1,4 @@
-import Image from "next/image";
-import styles from "../src/app/page.module.css";
+import styles from "./Main.module.css";
 import { Headline } from "./Headline";
 import { Links } from "./Links";
 
@@ -10,23 +9,17 @@ interface  Props{
 export function Main({page}:Props){
     return(
         <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <Headline
+            
+
+            <Headline
                 title = "index"
             >
-                <li className="tracking-[-.01em]">
-                pages/{page}.tsx
+                <li>
+                    pages/{page}.tsx
                 </li>
             </Headline>
 
-        <Links />
-      </main>
+            <Links />
+        </main>
     );
 }

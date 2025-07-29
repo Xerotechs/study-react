@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from "next/image";
+import styles from "./Headline.module.css";
+
 /**
  * ファイル名
  * @property title - ファイル名
@@ -15,15 +18,22 @@ interface  Props {
  */
 export function Headline({title,children}:Props){
     return(
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-            <li className="mb-2 tracking-[-.01em]">
+        <>
+        <Image
+                className={styles.logo}
+                src="/next.svg"
+                alt="Next.js logo"
+                width={180}
+                height={38}
+                priority
+            />   
+        <ol>
+          <li>
             Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-                {title}.tsx
-            </code>
-            .
-            </li>
-            {children}
+            <code>{title}.tsx</code>.
+          </li>
+          {children}
         </ol>
+        </>
     );
 }
