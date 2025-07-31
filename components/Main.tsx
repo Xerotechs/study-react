@@ -12,10 +12,10 @@ export function Main({page}:Props){
             
 
             <Headline
-                title = "index"
+                title = {page}
             >
                 <li>
-                    pages/{page}.tsx
+                    app/{page}.tsx
                 </li>
             </Headline>
 
