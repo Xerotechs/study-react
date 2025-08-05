@@ -21,7 +21,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/page/*": ["./src/app/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/lib/*"],
     },
     "plugins": [
       {

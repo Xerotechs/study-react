@@ -1,21 +1,20 @@
 import styles from "@/page/page.module.css";
+import { createMetadata } from "@/lib/metadata";
 import { Footer } from "@/components/Footer";
 import { Main } from "@/components/Main";
 import { Header } from "@/components/Header";
-import type { Metadata } from "next";
+import { ClickLink } from "@/components/ClickLink";
 
-// このページ専用の metadata を定義
-export const metadata: Metadata = {
-  title: "Page",
-  description: "Page"
-};
+// Metadataを設定
+export const metadata = createMetadata("Page", "Page");
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header/>
-      <Main page={"page"}/>
-      <Footer/>
+      <Header />
+      <ClickLink />
+      <Main page={"page"} />
+      <Footer />
     </div>
   );
 }

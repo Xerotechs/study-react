@@ -7,8 +7,8 @@ import styles from "@/components/Headline/Headline.module.css";
  * @property title - ファイル名
  */
 interface  Props {
-    title:string
-    children:React.ReactNode
+  title:string
+  children:React.ReactNode
 }
 
 /**
