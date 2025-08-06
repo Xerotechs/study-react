@@ -22,6 +22,7 @@
       "@/*": ["./src/*"],
       "@/page/*": ["./src/app/*"],
       "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
     },
     "plugins": [
