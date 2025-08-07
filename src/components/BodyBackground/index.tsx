@@ -8,10 +8,10 @@ interface Props {
 
 export function BodyBackground({ color }: Props) {
   useEffect(() => {
-    console.log("マウント時");
+    // マウント時処理
     document.body.style.background = color;
     return () => {
-      console.log("アンマウント時");
+      // アンマウント時処理
       document.body.style.background = "";
     };
   }, [color]);
